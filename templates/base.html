@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load compress %}
+
+    <title>{% block title %}Lion Burger{% endblock %}</title>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Rare web apps, well done." />
+
+    {% compress css %}
+        <link rel="stylesheet" href="/media/css/reset.css" />
+        <link rel="stylesheet" href="/media/css/960.css" />
+        <link rel="stylesheet" href="/media/css/fancyzoom.css" />
+        <link rel="stylesheet" href="/media/css/style.less" />
+    {% endcompress %}
+
+    {% compress js %}
+        <script src="/media/js/jquery.js"></script>
+        <script src="/media/js/fancyzoom.min.js"></script>
+        <script src="/media/js/script.js"></script>
+    {% endcompress %}
+
+    <!-- Feel free to checkout the raw LESS CSS at http://lionburger.com/media/css/style.less -->
+
+    <!--[if IE]>
+        <style type="text/css">
+            .group {
+                zoom: 1;
+                display: block;
+            }
+        </style>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- ChunkFive Font License: http://lionburger.com/media/fonts/chunkfive.license.txt -->
+
+</head>
+<body class="{% block class %}{% endblock %}">
+    <div class="cardboard-box header-container">
+        <div class="sesame-seed-bun container-16">
+            <header class="group">
+                <nav class="push-9 grid-7">
+                    <div class="butter inner group">
+                        <ul>
+                            <li>
+                                <a href="/" class="active">Home</a>
+                                <span class="sep"></span>
+                            </li>
+                            <li>
+                                <span>Our Work</span>
+                                <span class="sep"></span>
+                                <ul>
+                                    <li>
+                                        <a href="http://afeedapart.com" class="group">
+                                            <span class="lettuce">
+                                                <span class="mustard group">
+                                                    <span class="afa nibble"></span>
+                                                    <span class="title">A Feed Apart</span>
+                                                </span>
+                                            </span>
+                                            
+                                        </a>
+                                    </li>
+                                    <li class="bacon"></li>
+                                    <li class="left-pickle">
+                                        <span class="juice">
+                                            <span class="seed-1"></span>
+                                            <span class="seed-2"></span>
+                                            <span class="seed-3"></span>
+                                            <span class="seed-4"></span>
+                                            <span class="seed-5"></span>
+                                            <span class="seed-6"></span>
+                                            <span class="seed-7"></span>
+                                        </span>
+                                    </li>
+                                    <li class="right-pickle">
+                                        <span class="juice">
+                                            <span class="seed-1"></span>
+                                            <span class="seed-2"></span>
+                                            <span class="seed-3"></span>
+                                            <span class="seed-4"></span>
+                                            <span class="seed-5"></span>
+                                            <span class="seed-6"></span>
+                                            <span class="seed-7"></span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="http://reportingon.com" class="group">
+                                            <span class="lettuce group">
+                                                <span class="mustard group">
+                                                    <span class="reportingon nibble"></span>
+                                                    <span class="title">ReportingOn</span>
+                                                </span>
+                                            </span>
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://snipt.net" class="group">
+                                            <span class="lettuce group">
+                                                <span class="mustard group">
+                                                    <span class="snipt nibble"></span>
+                                                    <span class="title">Snipt</span>
+                                                </span>
+                                            </span>
+                                            
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="mailto:info@lionburger.com">Email</a>
+                            </li>
+                        </ul>
+                        <a href="/">
+                            <img src="/media/images/nom.png" />
+                        </a>
+                    </div>
+                </nav>
+                <div class="intro push-9 grid-7">
+                    <div class="rare">Rare web apps</div>
+                    <div class="well">Well done.</div>
+                    <p>
+                        Two minutes on, rotate 90&deg;. Flip after another two minutes. Poke. Rotate again after 120 seconds. Wait another two (2) incredibly long minutes. Consume.
+                    </p>
+                    <p>That's how we fire our web apps, too.</p>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="container-16 group">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="container-16 group">
+            <footer class="grid-16">
+                <div class="contact">
+                    <br />
+                </div>
+                <div class="subfooter">
+                    <a href="/">Lion Burger</a> is <a href="http://nick.sg">Nick Sergeant</a> and <a href="http://pkarl.com">Pete Karl</a>.
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script type="text/javascript"> 
+        //<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-514462-43']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+        })();
+        //]]>
+    </script> 
+
+</body>
+</html>
